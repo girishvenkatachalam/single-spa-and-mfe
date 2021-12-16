@@ -1,0 +1,25 @@
+{
+  "name": "single-spa-and-mfe",
+  "version": "1.0.0",
+  "description": "test mfe component incorporation onto a single spa app",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently npm:start:mfe npm:start:child npm:start:host",
+    "start:host": "cd ./packages/single-spa-host && npm run start",
+    "start:child": "cd ./packages/single-spa-child && npm run start",
+    "start:mfe": "cd ./packages/mfe-component && npm run start"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/girishvenkatachalam/single-spa-and-mfe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/girishvenkatachalam/single-spa-and-mfe/issues"
+  },
+  "homepage": "https://github.com/girishvenkatachalam/single-spa-and-mfe#readme"
+}
